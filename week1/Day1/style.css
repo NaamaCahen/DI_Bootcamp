@@ -1,0 +1,22 @@
+section p{
+    border: 10px double rgb(76, 24, 208);
+}
+p{
+    padding: 10%;
+}
+#para{
+    background-color: burlywood;
+    font-family: cursive;
+}
+h1+p{
+    font-size: 2em;
+    font-weight: bold;
+}
+section :nth-child(2){
+    height: 70vh;
+}
+.flag{
+    display: inline-block;
+    height: 100px;
+    width: 50px;
+}

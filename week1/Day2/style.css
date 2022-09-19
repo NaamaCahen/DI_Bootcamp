@@ -1,0 +1,7 @@
+form> input[type="checkbox"]:checked+label{
+    color: red;
+}
+
+option[value="grapes"]{
+    color: yellow;
+}
