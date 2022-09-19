@@ -1,0 +1,91 @@
+body{
+    font-family: 'Fira Sans', sans-serif;
+}
+.product{
+    border: 5px solid rgb(16, 248, 16);
+    display: inline-block;
+    margin: 20px;
+    box-shadow: rgb(216, 248, 91)  5px 3px;
+}
+.productImage{
+    height: 30vh;
+    width: 175px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+}
+.new{
+    background-color: green;
+    width: 50px;
+    height: 50px;
+    padding:8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    
+}
+#product1{
+    background-image: url(https://emova-monceaufleurs-fr-storage.omn.proximis.com/Imagestorage/images/740/740/608686fbb8e4d_FPagar1.jpg);
+
+}
+#product2{
+    background-image: url(https://assets.eflorist.com/assets/products/PHR_/T282-9A.jpg);
+}
+#product3{
+    background-image: url(https://m.fnp.com/images/pr/l/v20201107021055/eternal-assorted-flowers-bouquet_1.jpg);
+}
+#product4{
+    background-image: url(https://le-dahlia-noir.com/wp-content/uploads/2021/03/20210813_140836-scaled.jpg);
+}
+#product5{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSreefOpjz1DuB9fTqkaFpWM3gWK2ujIaCxsA&usqp=CAU);
+}
+#product6{
+    background-image: url(https://boutique.plusdefleurs.com/812-thickbox_default/bouquet-parfum-de-douceur.jpg);
+}
+#product7{
+    background-image: url(https://assets.eflorist.com/assets/products/PHR_/TEV12-5A.jpg);
+}
+#product8{
+    background-image: url(https://cdn.atwilltech.com/flowerdatabase/b/better-than-ever-bouquet-VA0282011.425.jpg);
+}
+#product9{
+    background-image: url(https://cdn.atwilltech.com/flowerdatabase/p/perfect-love-bouquet-fresh-flowers-VA00707.425.jpg);
+}
+#product10{
+    background-image: url(https://img.teleflora.com/images/o_0/l_flowers:TEV12-6C,pg_6/w_368,h_460,cs_no_cmyk,c_pad/f_jpg,q_auto:eco,e_sharpen:200/flowers/TEV12-6C/ThoughtsofYouPM);
+}
+#product11{
+    background-image: url(https://cdn.shopify.com/s/files/1/0504/7297/6543/products/graceful-grandeur-rose-bouquet-toronto-flower-co-826718_large.jpg?v=1635396658);
+}
+#product12{
+    background-image: url(https://fr-assets.eflorist.com/assets/products/PHR_/TLR01-1A.jpg);
+}
+.productPrice :first-child{
+    text-align: center;
+}
+.productPrice :nth-child(2){
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+.productPrice span{
+    text-decoration: line-through;
+    font-size: smaller;
+    color: grey;
+}
+.productPrice button{
+    position: relative;
+    left: 50px;
+    bottom: 5px;
+    color: rgb(231, 8, 8);
+
+}
+ button:hover{
+    background-color: palevioletred;
+    color: black;
+ }
