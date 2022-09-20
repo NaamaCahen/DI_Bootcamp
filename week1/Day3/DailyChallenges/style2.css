@@ -1,0 +1,80 @@
+section{
+    border: 2px solid brown;
+    height: 370px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.orange{
+    width: 25px;
+    height:25px;
+    background-color: orange;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+.pink{
+    width: 25px;
+    height:25px;
+    background-color: rgb(246, 214, 155);
+    margin-right: 3px;
+    margin-bottom: 3px;
+
+}
+.brown{
+    width: 25px;
+    height:25px;
+    background-color: brown;
+    margin-right: 3px;
+    margin-bottom: 3px;
+
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    height: 85px;
+    justify-content: space-around;
+}
+.white{
+    width: 25px;
+    height:25px;
+    background-color: white;
+}
+.red{
+    width: 25px;
+    height:25px;
+    background-color: rgb(239, 103, 103);
+}
+.rose{
+    width: 25px;
+    height:25px;
+    background-color: rgb(250, 172, 185);
+}
+.lightGrey{
+    width: 25px;
+    height:25px;
+    background-color: rgb(212, 208, 208);
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+.grey{
+    width: 25px;
+    height:25px;
+    background-color: grey;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+.navyGrey{
+    width: 25px;
+    height:25px;
+    background-color: rgb(51, 50, 50);
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+.black{
+    width: 25px;
+    height:25px;
+    background-color: black;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
