@@ -1,0 +1,22 @@
+#ex1,#ex2 {
+    display: flex;
+    border: 5px solid red;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+#ex1 div {
+    background-color: lightblue;
+    text-align: center;
+    padding: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+#ex1 :nth-child(2) {
+    width: 50%;
+    align-self: center;
+    padding: 3rem;
+}
