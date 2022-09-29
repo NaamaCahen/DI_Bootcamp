@@ -1,4 +1,7 @@
-
+*{
+    font-family: 'Neucha', cursive;
+/* font-family: 'Reem Kufi Ink', sans-serif; */
+}
 header{
     height: 100vh;
     width: 100vw;
@@ -6,4 +9,7 @@ header{
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+}
+header h1{
+    padding-top: 30vh;
 }
