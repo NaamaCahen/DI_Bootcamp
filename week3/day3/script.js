@@ -1,7 +1,8 @@
 
 function start() {
     setTimeout(displayBanner, 5000);
-   
+   const timer=setInterval(countDown,1000);
+   return timer;
 }
 
 function displayBanner() {
@@ -10,8 +11,8 @@ function displayBanner() {
 
 
 let counter=10;
-const timer=setInterval(countDown,1000);
-start();
+const timer=start();
+
 function countDown(){
     
     counter--;
