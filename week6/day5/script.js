@@ -154,10 +154,138 @@
 //     const total=secondInput.filter((m)=>m>=0).reduce((acc,val)=>acc+=val);
 //     console.log(total) //42   
 
-//19.Use 3 javascript methods and chain them to abbreviate the name and return the name initials.
-    const input = 'George Raymond Richard Martin';
-    //code 
-    const initials=input.split(' ').map((m)=>m[0]).reduce((acc,val)=>acc+=val);
-    console.log(initials)//'GRRM'
+// //19.Use 3 javascript methods and chain them to abbreviate the name and return the name initials.
+//     const input = 'George Raymond Richard Martin';
+//     //code 
+//     const initials=input.split(' ').map((m)=>m[0]).reduce((acc,val)=>acc+=val);
+//     console.log(initials)//'GRRM'
 
-    
+//20.How objects are passed to a function in JavaScript? By Value or By Reference ? Explain in detail, using the below example:
+// function changeTshirt (myshirt){
+//     console.log("myshirt", myshirt);
+//     myshirt.color = "red"
+//     console.log("myshirt", myshirt); //this is the parameter
+//     console.log("tshirt", tshirt);   //this is the global variable
+// }
+// const tshirt = {
+//     color : "blue",
+//     price : 10
+// }
+// changeTshirt(tshirt)
+// //objects are passed to functions by reference, that means that if you change the value of one of the object's properties inside the function, it will change also the global variable,
+// //and that's because javascript objects addresses are stored in the heap and just the names are in the stack , so when you send it as an argument to a function what happens is that
+// //it creates in the stack a new pointer(name), but that points to the same address! so in our case- myshirt and tshirt are just different names of the same address so when I change myshirt.color to red 
+// //it will automatically be changed also in tshirt .
+
+// //21.How would you change the code above, so that when you modify the key color from the parameter myshirt, it won't change the global variable tshirt ?
+// function changeTshirt (myshirt){
+//        myshirt={...tshirt};
+//         console.log("myshirt", myshirt);
+//         myshirt.color = "red"
+//         console.log("myshirt", myshirt); //this is the parameter
+//         console.log("tshirt", tshirt);   //this is the global variable
+//     }
+//     const tshirt = {
+//         color : "blue",
+//         price : 10
+//     }
+//     changeTshirt(tshirt)
+// //I used object destructuring to pass the values of tshirt to myshirt and not the refernce;
+
+// //22.Use object destructuring to retrieve the value of the keys france and spain
+//  const football = {
+//     type: "sport",
+//     clubs: {
+//       france : "Paris Saint-Germain",
+//       spain : "Atlético Madrid",
+//     }
+//   }  
+//   const {france,spain} = {...football.clubs};
+//   console.log(france);
+//   console.log(spain);
+
+// //23.Use object destructuring in the function to retrieve the value of the keys france and spain
+// function retrieveSports ({clubs:{france:franceTeam},clubs:{spain:spainTeam}}){
+//     console.log(franceTeam);
+//     const sentence = `My favorite football teams are ${franceTeam} and ${spainTeam}`;
+//     console.log(sentence);
+//  }
+//  const football = {
+//      type: "sport",
+//      clubs: {
+//        france : "Paris Saint-Germain",
+//        spain : "Atlético Madrid",
+//      }
+//    }  
+//  retrieveSports(football);
+
+//  //24.What will be printed in the console
+// class Item {
+//     constructor(nameProduct, priceProduct) { 
+//           this.name = nameProduct;
+//           this.price = priceProduct;
+//     } 
+//     displayInfo () {
+//          console.log(this.name + " is for $ " + this.price)
+//     }
+//  } 
+//  const cake = new Item("Chocolate Cake", 10);
+//  cake.displayInfo();
+//  //Chocolate Cake is for $ 10
+
+//  //25.What will be the output and why ? What will be the state of the promise ?
+// Promise.resolve('Success!')//return a resolved promise with the value: Success!
+// .then(data => {
+//   return data.toUpperCase()//returns SUCCESS!
+// })
+// .then(data => {
+//   console.log(data)//SUCCESS!
+// })
+
+// //26.What will be displayed by the following code, after 2 seconds?
+// const p = new Promise(function(resolve, reject) {
+//     setTimeout(function() {
+//        resolve("OK");
+//     }, 2000);
+//  });
+//  p.then().then(function(data) {
+//     console.log(data);
+//  });
+//  //OK
+
+// //27.Consider the following async function and its output. What will be displayed to the console when calling the test() function? Explain the process
+// async function test() {//2
+//     let result = 'first!';//3 result=first
+//     const promise = new Promise((resolve, reject) => {
+//         setTimeout(() => resolve('done!'), 1000);//4resolves the promise with 'done!' after one second
+//     });
+//     result = await promise;//5 result awaits the promise response and then gets "done!" 
+//     console.log(result);//6 done!
+// }
+// test();//1 invoking the function
+
+
+//28.Use async await, and fetch a fact on cats and display it. Use this third party API : https://catfact.ninja/fact
+//i In the HTML file, create a button, everytime you click it you will add a random cat fact on the DOM
+//ii In the JS file, create 2 functions : one to fetch data from API, the other one to display it on the page using the DOM
+//iii Make sure to use try and catch
+document.getElementById("cat").addEventListener("click", addCatFact);
+function addCatFact() {
+    fetchFactCat();
+}
+async function fetchFactCat() {
+    try{
+    const fetchFact = await fetch(`https://catfact.ninja/fact`);
+    const obj = await fetchFact.json();
+    appendOnPage(obj);
+}
+catch{
+    console.log("error!");
+}
+}
+function appendOnPage(obj) {
+    const p = document.createElement("p");
+    const fact = document.createTextNode(obj.fact);
+    p.appendChild(fact);
+    document.body.appendChild(p);
+}
