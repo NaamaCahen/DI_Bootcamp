@@ -36,7 +36,7 @@ const football = {
 }  
 football.clubs[myteam] = "France national football team";
 console.log(football.clubs);
-//it will print an error because myteam is not a property of the football object.
+//it will add a new property to the object.
 
 //6.Can we define the function as follows? If yes, what is it called, and explain how to invoke it.
 const x = function(a, b){
@@ -143,10 +143,10 @@ forOfLoop();
 // [50,88] it filters the array and returning an array just with the  values that passed the function condition.
 
 //17.Use a javascript array method to square the value of every element in the array.
-   let input = [ 1, 2, 3, 4, 5 ];
+   const input = [ 1, 2, 3, 4, 5 ];
    //code
-   input=input.map((m)=>m*m)
-   console.log(input) // [ 1, 4, 9, 16, 25]
+   const newArr=input.map(m=>m*m)
+   console.log(newArr) // [ 1, 4, 9, 16, 25]
 
 //18.Use 2 javascript array methods and chain them to return the sum of all the positives ones.
     const secondInput = [ 1, -4, 12, 0, -3, 29, -150];
@@ -200,12 +200,12 @@ function changeTshirt (myshirt){
       spain : "Atlético Madrid",
     }
   }  
-  const {france,spain} = {...football.clubs};
+  const {france,spain} = football.clubs;
   console.log(france);
   console.log(spain);
 
 //23.Use object destructuring in the function to retrieve the value of the keys france and spain
-function retrieveSports ({clubs:{france:franceTeam},clubs:{spain:spainTeam}}){
+  function retrieveSports ({clubs:{france:franceTeam, spain:spainTeam}}){
     console.log(franceTeam);
     const sentence = `My favorite football teams are ${franceTeam} and ${spainTeam}`;
     console.log(sentence);
@@ -269,10 +269,7 @@ test();//1 invoking the function
 // i In the HTML file, create a button, everytime you click it you will add a random cat fact on the DOM
 // ii In the JS file, create 2 functions : one to fetch data from API, the other one to display it on the page using the DOM
 // iii Make sure to use try and catch
-document.getElementById("cat").addEventListener("click", addCatFact);
-function addCatFact() {
-    fetchFactCat();
-}
+document.getElementById("cat").addEventListener("click", fetchFactCat);
 async function fetchFactCat() {
     try{
     const fetchFact = await fetch(`https://catfact.ninja/fact`);
